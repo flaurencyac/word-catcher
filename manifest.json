@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "SaveMe",
+  "version": "1.0",
+  "description": "Save words that you look up",
+  "permissions": ["contextMenus", "storage", "tabs",
+      "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+    "icons": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "browser_action": {
+         "default_icon": {
+           "16": "images/icon16.png",
+           "32": "images/icon32.png"
+         },
+         "default_title": "See my words",
+         "default_popup": "popup.html"
+       },
+  "background": {
+    "scripts": ["background.js"],
+    "default_title": "SaveMe"
+  }
+}

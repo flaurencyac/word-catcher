@@ -1,0 +1,70 @@
+<!--
+  This is the popup  HTML file. It will appear whenever the user
+  presses the extension button.  It just a plain old web page!
+  But it can communicate with the background and content scripts
+-->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Caught Words</title>
+    <script src="link.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:thin,light,regular,bold,black&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <style>
+      ul {
+        list-style: none;
+        font-family: "Lato";
+      }
+      ul li {
+        border: .1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        padding: 8px;
+        text-decoration: none;
+        font-size: 14px;
+        color: black;
+        display: block;
+        position: relative;
+      }
+      ul li:hover {
+        background-color: #f6f6f6;
+      }
+      .close {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        padding: 12px 16px;
+        transform: translate(0%, -50%);
+      }
+      .heading {
+        font-family: "Lato", sans-serif;
+        padding-left: 16px;
+        padding-top: 16px;
+        font-weight: 300;
+        font-size: 35px;
+      }
+      .word {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+      }
+      .definition {
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  </head>
+
+  <body>
+    <h3 class = "heading"> CAUGHT WORDS </h3>
+    <ul id = "my_list" class="w3-ul w3-border">
+
+    </ul>
+
+
+  </body>
+
+</html>
